@@ -3,7 +3,7 @@ import { AppBar, Tabs, Tab, Container, Typography, Box, useScrollTrigger } from 
 import OverviewSection from './Component/Overview';
 import TrackRecordSection from './Component/Trackrecord';
 import TrackRecordBoxSection from './Component/TrackRecordBox';
-
+import TeamSection from './Component/TeamSection'
 function App() {
   const [value, setValue] = useState(0);
   const sectionsRef = useRef({});
@@ -148,20 +148,14 @@ function App() {
         </Box>
 
         <Box ref={(el) => (sectionsRef.current['team'] = el)} id="team" my={4}>
-          <Typography variant="h4">Team</Typography>
-          <Typography>Track record content here.</Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna.
-          </Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna.
-          </Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna.
-          </Typography>
+        <Box my={4} sx={{ backgroundColor: 'white', color: 'black', padding: '16px', borderRadius: '4px' }}>
+        <Typography variant="h4">
+          Team
+        </Typography>
+        </Box>
+          <TeamSection name="John Deo"/>
+          <TeamSection name="Mike Deo"/>
+          <TeamSection name="Kreshen Deo"/>
         </Box>
 
         {/* Add other sections similarly */}
