@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { AppBar, Tabs, Tab, Container, Typography, Box, useScrollTrigger } from '@mui/material';
 import OverviewSection from './Component/Overview';
 import TrackRecordSection from './Component/Trackrecord';
-
+import TrackRecordBoxSection from './Component/TrackRecordBox';
 
 function App() {
   const [value, setValue] = useState(0);
@@ -92,18 +92,8 @@ function App() {
           <Typography variant="h4">Track Record</Typography>
           <TrackRecordSection/>
           <Typography>Track record content here.</Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna.
-          </Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna.
-          </Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna.
-          </Typography>
+          <TrackRecordBoxSection title="Interview With CEO"/>
+          <TrackRecordBoxSection title ="Company show Reel"/>
         </Box>
 
         <Box ref={(el) => (sectionsRef.current['investment-strategy'] = el)} id="investment-strategy" my={4}>
