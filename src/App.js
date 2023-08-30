@@ -4,6 +4,8 @@ import OverviewSection from './Component/Overview';
 import TrackRecordSection from './Component/Trackrecord';
 import TrackRecordBoxSection from './Component/TrackRecordBox';
 import TeamSection from './Component/TeamSection'
+import Header from './Component/Header'
+
 function App() {
   const [value, setValue] = useState(0);
   const sectionsRef = useRef({});
@@ -59,6 +61,9 @@ function App() {
 
   return (
     <div>
+
+    <Header></Header>
+
       {/* Banner */}
       <Container maxWidth="md">
         <Typography variant="h2" gutterBottom>
